@@ -6,6 +6,7 @@
 
 <link rel="stylesheet" href="styles.css" type="text/css" />
 
+
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript" src="js/custom.js"></script>
 
@@ -32,10 +33,10 @@ License: Creative Commons Attribution
 
 			<nav id="mainnav">
   				<ul>
-                            		<li><a href="index.html">Home</a></li>
-                           		 <li class="selected-item"><a href="examples.html">Academic</a></li>
-                           		 <li><a href="about.html">About</a></li>
-                            		<li><a href="Contact_me.html">Contact me</a></li>
+                            	<li><a href="index.html">Home</a></li>
+                           		<li class="selected-item"><a href="examples.html">Academic</a></li>
+                           		<li><a href="about.html">About</a></li>
+                            	<li><a href="contact_me.html">Contact me</a></li>
 
                         	</ul>
 			</nav>
@@ -60,29 +61,54 @@ License: Creative Commons Attribution
                             </form>	
 			</div>
 
-
 			<footer class="responsive-sidebar-hide">
 <p>Powered by <a href="http://zypopwebtemplates.com/">ZyPOP</a></p>			</footer>
-		
-			
-			
+
 			</aside>
 			<section id="content" class="column-right">
                 		
-	    <article>
-				
-			
-			<h2>Heading</h2>
-			
-
-
-		
-		</article>
+	    
 	
 		<article class="expanded">
+		<h2>Active Tabs</h2>
+  <p>To highlight the current tab/page the user is on, add a color class, and use JavaScript to update the active link.</p>
+<div id="tab">
+<ul>
+    <li><a href="javascript:void(0)" class="tablink tab-item-selected" onclick="openCity(event, 'London');">London</a></li>
+    <li><a href="javascript:void(0)" class="tablink" onclick="openCity(event, 'Paris');">Paris</a></li>
+    <li><a href="javascript:void(0)" class="tablink" onclick="openCity(event, 'Tokyo');">Tokyo</a></li>
+  </ul>
+</div>
+<div id="London" class="city">
+    <h2>London</h2>
+    <p>London is the capital city of England.</p>
+  </div>
 
-            		<h2>Title</h2>
-			<div class="article-info">Posted on <time datetime="2013-05-14">14 May</time> by<a href="http://vikramabhang.github.io" rel="author">Vikram Abhang</a></div>
+  <div id="Paris" class="city" style="display:none">
+    <h2>Paris</h2>
+    <p>Paris is the capital of France.</p> 
+  </div>
+
+  <div id="Tokyo" class="city" style="display:none">
+    <h2>Tokyo</h2>
+    <p>Tokyo is the capital of Japan.</p>
+  </div>
+<script>
+function openCity(evt, cityName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("city");
+  for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" tab-item-selected", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " tab-item-selected";
+}
+</script>
+
 
 			
 		</article>

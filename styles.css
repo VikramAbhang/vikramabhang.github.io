@@ -4,7 +4,7 @@
 body {
 	margin:0px auto;
 	padding:0;
-	background: #4527A0;
+	background-color: #311B92;
 	font-family: 'Source Sans Pro', 'sans-serif';
 	font-size: 1.2em;
 	color:#666;
@@ -303,7 +303,6 @@ nav#mainnav li.selected-item a:hover {
 nav#mainnav li a:hover {
 	background:#673AB7;
 	color: #fff;
-
 	text-decoration:none;
 }
 nav#mainnav li a, .responsive-buttons a {
@@ -318,6 +317,32 @@ nav#mainnav li a, .responsive-buttons a {
 	font-size: 1.1em;
 	text-decoration: none;
 	
+}
+
+div#tab ul{
+	padding: 10px;
+	background-color: #311B92;
+	list-style: none;
+}
+div#tab ul li{
+	display: inline;
+}
+div#tab ul li a{
+	text-align: center;
+	color: #fff;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 1.1em;
+	padding: 10px;
+	border: 0px solid #fff;
+	text-decoration: none;
+}
+div#tab ul li a:hover{
+	color:#fff;
+}
+div#tab .tab-item-selected{
+	color:#fff;
+	background-color:#E91E63;
 }
 
 
